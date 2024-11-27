@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Søknadsskjema for Masterprogram ved NHH</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            line-height: 1.6;
+        }
+        .hidden {
+            display: none;
+        }
+        .section {
+            margin-bottom: 20px;
+        }
+        button {
+            margin-top: 10px;
+            padding: 10px 20px;
+            background-color: #0072ce;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #005bb5;
+        }
+    </style>
+</head>
+<body>
+    <h1>Søknadsskjema for Masterprogram ved NHH</h1>
+    <div id="language-section" class="section">
+        <h2>Velg språk</h2>
+        <button onclick="selectLanguage('no')">Norsk</button>
+        <button onclick="selectLanguage('en')">English</button>
+    </div>
+
+    <div id="program-section" class="section hidden">
+        <h2 id="program-title"></h2>
+        <div id="no-program-options" class="hidden">
+            <button onclick="selectProgram('MØA')">MØA (Master i økonomi og administrasjon)</button>
+            <button onclick="selectProgram('MRR')">MRR (Master i regnskap og revisjon)</button>
+        </div>
+        <div id="en-program-options" class="hidden">
+            <button onclick="selectProgram('MSc')">MSc (Master in Economics and Business Administration)</button>
+        </div>
+    </div>
+
+    <div id="questions-section" class="section hidden">
+        <h2 id="questions-title"></h2>
+        <div id="questions-content"></div>
+        <button onclick="showUploadSection()">Neste</button>
+    </div>
+
+    <div id="upload-section" class="section hidden">
+        <h2>Last opp dokumenter</h2>
+        <p>Vennligst last opp nødvendig dokumentasjon:</p>
+        <ul>
+            <li>CV</li>
+            <li>Karakterutskrifter</li>
+           
